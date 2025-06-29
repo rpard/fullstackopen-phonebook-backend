@@ -5,8 +5,6 @@ const Person = require('./models/person')
 
 const app = express()
 
-let persons = []
-
 morgan.token('body', (req) => {
   return req.method === 'POST' ? JSON.stringify(req.body) : ''
 })
